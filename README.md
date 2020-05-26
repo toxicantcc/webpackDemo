@@ -10,7 +10,6 @@ npm install --save-dev webpack-cli
 npm install --global webpack
 ```
 ### 管理资源
-+ css
   ```
   <!-- 安装css-loader 和 style-loader 识别css文件-->
   npm install --save-dev css-loader style-loader
@@ -19,6 +18,14 @@ npm install --global webpack
   <!-- 安装 csv-loader xml-loader 支持CSV TSV XML文件，JSON文件内置支持 -->
   npm install --save-dev csv-loader xml-loader
   ```
+### 管理输出
+```
+<!-- 设定HtmlWebpackPlugin -->
+npm install --save-dev html-webpack-plugin
+<!-- 添加 CleanWebpackPlugin 来清理dist文件夹-->
+npm install --save-dev clean-webpack-plugin
+```
+
 
 
 
