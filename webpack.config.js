@@ -4,14 +4,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
+// const Webpack = require('webpack');
+
 module.exports = {
   mode: "production",
   // entry: './src/index.js',
 
   // 分离入口文件
   entry: {
+    // app: "./src/index.js",
+    // print: "./src/print.js",
     app: "./src/index.js",
-    print: "./src/print.js",
   },
 
   // 开发
@@ -20,6 +23,16 @@ module.exports = {
   // webpack-dev-server
   devServer: {
     contentBase: "./dist",
+    hot: true,
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
   },
 
   output: {
@@ -35,7 +48,10 @@ module.exports = {
     new CleanWebpackPlugin(),
     // new CleanWebpackPlugin({ cleanStaleWebpackAssets: false}),  //开启观察者模式需要保留dist文件夹下的html文件
     new HtmlWebpackPlugin({
-      title: "管理输出",
+      title: "模块热替换",
     }),
+    // 添加了 NamedModulesPlugin，以便更容易查看要修补(patch)的依赖
+    // new Webpack.NamesModulesPlugin(),
+    // new Webpack.HotModuleReplacementPlugin(),
   ],
 };

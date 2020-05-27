@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
     "build": "webpack",
-    "start": "webpack-dev-server --open",
-    "server": "node server.js"
+    "start": "webpack-dev-server --open --hotOnly",
+    "server": "node server.js",
+    "devServer": "node devServer.js"
   },
   "keywords": [],
   "author": "",
