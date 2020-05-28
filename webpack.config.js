@@ -7,7 +7,11 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 // const Webpack = require('webpack');
 
 module.exports = {
-  mode: "production",
+  // mode: "development",
+  mode: 'production',
+  optimization: {
+    usedExports: true, 
+  },
   // entry: './src/index.js',
 
   // 分离入口文件
@@ -30,9 +34,9 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
-    ]
+        use: ["style-loader", "css-loader"],
+      },
+    ],
   },
 
   output: {

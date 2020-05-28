@@ -66,7 +66,20 @@ Elm Hot Loader：支持用于 Elm 程序语言的 HMR。
 Redux HMR：无需 loader 或插件！只需对 main store 文件进行简单的修改。
 Angular HMR：No loader necessary! A simple change to your main NgModule file is all that's required to have full control over the HMR APIs.没有必要使用 loader！只需对主要的 NgModule 文件进行简单的修改，由 HMR API 完全控制。
 ```
+### Tree Shaking
+```
+为了学会使用 tree shaking，你必须……
 
-
-
-
+使用 ES2015 模块语法（即 import 和 export）。
+在项目 package.json 文件中，添加一个 "sideEffects" 入口。
+引入一个能够删除未引用代码(dead code)的压缩工具(minifier)（例如 UglifyJSPlugin）。
+你可以将应用程序想象成一棵树。绿色表示实际用到的源码和 library，是树上活的树叶。灰色表示无用的代码，是秋天树上枯萎的树叶。为了除去死去的树叶，你必须摇动这棵树，使它们落下。
+```
+#### 将文件标记为无副作用
+```
+「副作用」的定义是，在导入时会执行特殊行为的代码，而不是仅仅暴露一个 export 或多个 export。举例说明，例如 polyfill，它影响全局作 用域，并且通常不提供 export。
+```
+#### 压缩输出  （-p）
+```
+mode设置为production
+```
