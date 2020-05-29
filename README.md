@@ -92,4 +92,13 @@ mode设置为production
 
 webpack-merge 安装
 npm install --save-dev webpack-merge
+
+生产环境使用UglifyJSPlugin工具(webpack版本为4以上，可直接设置mode: 'production')
+npm install --save-dev uglifyjs-webpack-plugin
 ```
+#### source map
+```
+鼓励在生产环境中使用
+devtool: 'source-map',
+```
+#### 最小化CSS， cli替代 

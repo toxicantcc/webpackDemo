@@ -7,10 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "build": "webpack",
-    "start": "webpack-dev-server --open --hotOnly",
     "server": "node server.js",
-    "devServer": "node devServer.js"
+    "devServer": "node devServer.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +22,7 @@
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "lodash": "^4.17.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.1.1",
     "webpack-dev-middleware": "^3.7.2",
@@ -30,6 +31,7 @@
   "dependencies": {
     "css-loader": "^3.5.3",
     "style-loader": "^1.2.1",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
   }
 }
