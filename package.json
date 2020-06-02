@@ -9,8 +9,8 @@
     "watch": "webpack --watch",
     "server": "node server.js",
     "devServer": "node devServer.js",
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "start": "webpack-dev-server --open ",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",

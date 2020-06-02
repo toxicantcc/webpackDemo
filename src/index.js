@@ -1,16 +1,14 @@
-// import _ from 'lodash'
+import _ from 'lodash'
 // import printMe from './print.js'
 // import './index.css'
-import { methodTwo } from './commom.js'; 
+// import { methodTwo } from './commom.js'; 
 
 function component() {
 
   var element = document.createElement('pre');
 
-  element.innerHTML = [
-    'Hello Webpack',
-    'This is method result '+ methodTwo(5)
-  ].join('\n\n')
+  element.innerHTML = 'Hello Webpack!'
+  console.log(_.join(["index", "bundle", "lodash"], ""));
 
 
 
