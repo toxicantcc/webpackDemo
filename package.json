@@ -31,7 +31,9 @@
   "dependencies": {
     "css-loader": "^3.5.3",
     "style-loader": "^1.2.1",
+    "webpack-bundle-analyzer": "^3.8.0",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "webpack-visualizer-plugin": "^0.1.11"
   }
 }

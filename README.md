@@ -24,3 +24,13 @@
     }
   },
 ```
+#### 动态导入
+1、 import()
+2、 webpack特定的require.ensure
+
+#### bundle 分析
+webpack-chart: webpack 数据交互饼图。
+webpack-visualizer: 可视化并分析你的 bundle，检查哪些模块占用空间，哪些可能是重复使用的。
+webpack-bundle-analyzer: 一款分析 bundle 内容的插件及 CLI 工具，以便捷的、交互式、可缩放的树状图形式展现给用户。 (yarn add)
+webpack bundle optimize helper: 此工具将分析您的软件包，并为您提供可行的建议，以进行改进以减小软件包的大小。
+bundle-stats: 生成捆绑包报告（捆绑包大小，资产，模块），并比较不同版本之间的结果。
