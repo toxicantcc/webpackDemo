@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{4:function(o,e,n){"use strict";n.r(e),console.log("The print.js is loaded!"),e.default=()=>{console.log('Button clicked: "Some Text" ')}}}]);

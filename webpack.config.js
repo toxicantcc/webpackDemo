@@ -11,7 +11,7 @@ module.exports = {
   output: {
     filename: "[name].bundle.js",
     chunkFilename: "[name].bundle.js", //决定非入口的名称
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist"), 
   },
 
   // optimization: {
@@ -24,7 +24,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
-      title: "代码分离",
+      title: "懒加载",
     }),
   ],
 };
